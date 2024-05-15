@@ -6,4 +6,8 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: OutputGithubContext
-              run : echo "${{ toJson(github) }}"
+              run : echo "${{ toJson(github) }}">githubifo.json
+            - uses: actions/upload-artifact@v4
+              with:
+                name: drop
+                path: ./githubifo.json
