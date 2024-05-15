@@ -1,0 +1,9 @@
+name: OutputContext
+on: push
+jobs:
+    info:
+        name: Information
+        runs-on: ubuntu-latest
+        steps:
+            - name: OutputGithubContext
+              run : echo "${{ toJson(github) }}"
