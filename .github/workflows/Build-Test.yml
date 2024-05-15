@@ -1,4 +1,4 @@
-name: StartingProjectBuild&Test
+name: Build&Test
 on: [workflow_dispatch,push]
 jobs:
   Build:
@@ -26,6 +26,7 @@ jobs:
 
   Test:
     name: Test
+    needs: Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
