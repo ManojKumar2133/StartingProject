@@ -9,7 +9,7 @@ jobs:
         steps:
             - name: OutputGithubContext
               run: |
-                echo "repository variable : $REPOSITORY_VAR"
+                echo "repository variable : $REPOSITORY_VAR , $Env"
               env:
                 REPOSITORY_VAR: ${{ vars.MANOJ }}
                 Env: ${{ vars.Ramu }}
