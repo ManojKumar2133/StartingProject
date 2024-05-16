@@ -12,6 +12,7 @@ jobs:
                 echo "repository variable : $REPOSITORY_VAR"
               env:
                 REPOSITORY_VAR: ${{ vars.MANOJ }}
+                Env: ${{ vars.Ramu }}
                
             - uses: actions/upload-artifact@v4
               with:
