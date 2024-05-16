@@ -6,7 +6,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: OutputGithubContext
-              run : env
+              run : env.manoj
                  # echo "$manoj"
                  # echo "${{ env.prod.manoj }}"
                  # echo "${{ toJson(github) }}">githubifo.json
