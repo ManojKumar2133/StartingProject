@@ -1,5 +1,7 @@
 name: OutputContext
-on: push
+on: 
+  push:
+  workflow_dispatch:
 jobs:
     info:
         name: Information
