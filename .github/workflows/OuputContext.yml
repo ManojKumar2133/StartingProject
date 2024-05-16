@@ -10,6 +10,8 @@ jobs:
         steps:
             - name: OutputGithubContext
               run: |
+                env
+                echo "${{ tojson(github) }}"
                 echo "repository variable : $REPOSITORY_VAR , $Env"
               env:
                 REPOSITORY_VAR: ${{ vars.MANOJ }}
