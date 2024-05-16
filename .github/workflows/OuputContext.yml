@@ -10,7 +10,8 @@ jobs:
         steps:
             - name: OutputGithubContext
               run: |
-                env
+                echo $Ramu
+                
                 echo "${{ tojson(github) }}"
                 echo "repository variable : $REPOSITORY_VAR , $Env"
               env:
