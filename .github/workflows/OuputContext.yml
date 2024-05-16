@@ -6,9 +6,12 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: OutputGithubContext
-              run : env.manoj
+              run : |
+                 env
+                 env.production
+
                  # echo "$manoj"
-                 # echo "${{ env.prod.manoj }}"
+                 echo "${{ env.production.manoj }}"
                  # echo "${{ toJson(github) }}">githubifo.json
                
             - uses: actions/upload-artifact@v4
