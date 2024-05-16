@@ -2,6 +2,8 @@ name: OutputContext
 on: 
   push:
   workflow_dispatch:
+
+  
 jobs:
     info:
         name: Information
@@ -10,6 +12,7 @@ jobs:
         steps:
             - name: OutputGithubContext
               run: |
+                env
                 echo $Ramu
                 
                 echo "${{ tojson(github) }}"
