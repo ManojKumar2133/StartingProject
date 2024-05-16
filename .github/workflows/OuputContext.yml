@@ -6,11 +6,11 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: OutputGithubContext
-              run : |
-                echo $var
-                 # echo "${{ toJson(github) }}">githubifo.json
+              run: |
+                echo "repository variable : $REPOSITORY_VAR"
               env:
-               var: ${{ vars.manoj }}
+                REPOSITORY_VAR: ${{ vars.manoj }}
+               
             - uses: actions/upload-artifact@v4
               with:
                 name: drop
