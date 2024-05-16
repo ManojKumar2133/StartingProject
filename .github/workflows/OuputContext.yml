@@ -7,13 +7,10 @@ jobs:
         steps:
             - name: OutputGithubContext
               run : |
-                 env
-                 env.production
-
-                 # echo "$manoj"
-                 echo "${{ env.production.manoj }}"
+                echo $var
                  # echo "${{ toJson(github) }}">githubifo.json
-               
+              env:
+               var: ${{ vars.manoj }}
             - uses: actions/upload-artifact@v4
               with:
                 name: drop
